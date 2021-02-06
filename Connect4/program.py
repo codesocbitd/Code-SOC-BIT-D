@@ -69,7 +69,7 @@ def convert_bitboard(boardState):
     for i in range(0,7):
         for j in range(0,7):
             ch = boardState[j][i]
-            board_state_string =  board_state_string*10 + ch
+            board_state_num =  board_state_num*10 + ch
             if(ch==0):
                 bb_string_1+='0'
                 bb_string_2+='0'
@@ -82,7 +82,7 @@ def convert_bitboard(boardState):
     bitboard_1 = int(bb_string_1,2)
     bitboard_2 = int(bb_string_2,2)
     
-    return bitboard_1,bitboard_2,
+    return bitboard_1,bitboard_2,board_state_num
 def checkHorizontalFour(bitboard):
     temp = bitboard
     temp = (temp) &(temp>>7)
