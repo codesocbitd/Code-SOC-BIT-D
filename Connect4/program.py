@@ -150,11 +150,11 @@ def checkVerticalTwo(bitboard):
 
 def evaluationFunction(bitboard_player_1,bitboard_palyer_2,coeff):
     fours_1 = checkHorizontalFour(bitboard_player_1)+checkTLBRFour(bitboard)+checkBLTRFour(bitboard)+checkVerticalFour(bitboard)
-    threes_1 = checkHorizontalThree(bitboard)+checkTLBRThree(bitboard)+checkBLTRThree(bitboard)+checkVerticalThree(bitboard)
-    two_1 = checkHorizontalTwo(bitboard)+checkLDTwo(bitboard)+checkRDTwo(bitboard)+checkVerticalTwo(bitboard)
-    fours_2 = checkHorizontalFour(bitboard_player_2)+checkTLBRFour(bitboard)+checkBLTRFour(bitboard)+checkVerticalFour(bitboard)
-    threes_2 = checkHorizontalThree(bitboard)+checkTLBRThree(bitboard)+checkBLTRThree(bitboard)+checkVerticalThree(bitboard)
-    two_2 = checkHorizontalTwo(bitboard)+checkLDTwo(bitboard)+checkRDTwo(bitboard)+checkVerticalTwo(bitboard)
+    threes_1 = checkHorizontalThree(bitboard_player_1)+checkTLBRThree(bitboard_player_1)+checkBLTRThree(bitboard_player_1)+checkVerticalThree(bitboard_player_1)
+    two_1 = checkHorizontalTwo(bitboard_player_1)+checkLDTwo(bitboard_player_1)+checkRDTwo(bitboard_player_1)+checkVerticalTwo(bitboard_player_1)
+    fours_2 = checkHorizontalFour(bitboard_player_2)+checkTLBRFour(bitboard_player_2)+checkBLTRFour(bitboard_player_2)+checkVerticalFour(bitboard_player_2)
+    threes_2 = checkHorizontalThree(bitboard_player_2)+checkTLBRThree(bitboard_player_2)+checkBLTRThree(bitboard_player_2)+checkVerticalThree(bitboard_player_2)
+    two_2 = checkHorizontalTwo(bitboard_player_2)+checkLDTwo(bitboard_player_2)+checkRDTwo(bitboard_player_2)+checkVerticalTwo(bitboard_player_2)
     SCORE = coeff*(fours_1+threes_1+two_1)+(-coeff)*(fours_2+threes_2+two_2)
     return SCORE
 
